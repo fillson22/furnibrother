@@ -1,5 +1,4 @@
-ActiveRecord::Schema[8.0].define(version: 2025_05_02_202129) do
-
+ActiveRecord::Schema[8.0].define(version: 2025_05_06_120948) do
   enable_extension "pg_catalog.plpgsql"
 
   create_table "products", force: :cascade do |t|
@@ -14,5 +13,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_02_202129) do
     t.string "username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email"
+    t.string "password_hash"
+    t.string "password_salt"
+    t.string "avatar_url"
   end
 end
